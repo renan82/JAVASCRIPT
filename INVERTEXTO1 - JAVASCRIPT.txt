@@ -1,0 +1,95 @@
+const valor_hora = Number(prompt("Digite quanto você ganha por hora: "))
+const qtde_horas = Number(prompt("Digite quantas horas você trabalha por mês: "))
+
+const salario_bruto = qtde_horas * valor_hora
+const desconto_IR = salario_bruto * 0.11
+const desconto_INSS = salario_bruto * 0.08
+const desconto_sindicato = salario_bruto * 0.05
+const salario_liquido = salario_bruto - desconto_INSS - desconto_IR - desconto_sindicato
+
+console.log(`Salário bruto: ${salario_bruto}`)
+console.log(`Desconto do Imposto de Renda: ${desconto_IR}`)
+console.log(`Desconto do INSS: ${desconto_INSS}`)
+console.log(`Desconto do Sindicato: ${desconto_sindicato}`)
+console.log(`Salário liquido: ${salario_liquido}`)
+
+
+
+
+
+const numero1 = 5
+const numero2 = 8
+const numero3 = "5"
+console.log(numero1 == numero2)
+console.log(numero1 == numero3)
+console.log(numero1 === numero3)
+console.log(numero1 != numero3)
+console.log(numero1 !== numero3)
+console.log(numero1 > numero2)
+console.log(numero1 < numero2)
+console.log(numero1 >= numero2)
+console.log(numero1 <= numero2)
+
+
+
+
+const idade = Number(prompt("Digite sua idade: "))
+
+if(idade >= 18){
+    alert("Já pode ir preso")
+}else{
+    alert("Vai pra febem")
+}
+
+
+
+
+const idade = Number(prompt("Digite sua idade: "))
+
+if(idade >= 16 && idade < 18){
+    alert("Voto facultativo")
+}else if (idade >= 18 && idade <= 70){
+    alert("Voto obrigatório")
+}else if(idade > 70){
+    alert("Voto facultativo")
+}else{
+    alert("Você não pode votar")
+}
+
+
+
+const idade = Number(prompt("Digite sua idade: "))
+
+if( (idade >= 16 && idade < 18) || (idade > 70)){
+    alert("Voto facultativo")
+}else if (idade >= 18 && idade <= 70){
+    alert("Voto obrigatório")
+}else{
+    alert("Você não pode votar")
+}
+
+
+
+
+const numero = Number(prompt("Digite um número: "))
+
+if(numero > 0){
+    alert(`O número ${numero} é positivo`)
+}else if(numero < 0){
+    alert(`O número ${numero} é negativo`)
+}else{
+    alert(`O número ${numero} é neutro`)
+}
+
+
+
+const hora = Number(prompt("Digite uma hora: "))
+
+if(hora >= 4 && hora <=12){
+    alert("Bom dia")
+}else if(hora > 12 && hora <=18){
+    alert("Boa tarde")
+}else if( (hora > 18 && hora <= 23) || (hora >= 0 && hora <=3) ){
+    alert("Boa noite")
+}else{
+    alert("Horário inválido")
