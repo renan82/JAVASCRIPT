@@ -1,0 +1,147 @@
+FAÇA UM PROGRAMA QUE PEDE PARA O USUÁRIO DIGITAR 3 NÚMEROS E MOSTRA NA TELA QUAL O MAIOR NÚMERO QUE FOI DIGITADO
+
+const numero1 = Number(prompt("Digite o primeiro número: "))
+const numero2 = Number(prompt("Digite o segundo número: "))
+const numero3 = Number(prompt("Digite o terceiro número: "))
+
+
+if(numero1 > numero2 && numero1 > numero3){
+    alert(`O número ${numero1} é o maior`)
+}else if(numero2 > numero1 && numero2 > numero3){
+    alert(`O número ${numero2} é o maior`)
+}else if(numero3 > numero1 && numero3 > numero2){
+    alert(`O número ${numero3} é o maior`)
+}else{
+    alert(`Todos os números são iguais`)
+}
+
+
+
+
+
+FAÇA UM PROGRAMA QUE PEDE PARA O USUÁRIO DIGITAR UM EMAIL E DEPOIS UMA SENHA E VERIFIQUE SE O EMAIL E SENHA ESTÃO CORRETOS:
+EMAIL E SENHAS CORRETOS SÃO:
+joao@email.com
+123456J@
+
+
+VERSÃO 1
+
+const email = prompt("Digite seu email: ")
+const senha = prompt("Digite seu email: ")
+
+const email_correto = "joao@email.com"
+const senha_correta = "123456J@"
+
+if(email === "joao@email.com" && senha === "123456J@"){
+    alert("Login efetuado com sucesso")
+}else{
+    alert("Email ou senha estão incorretos")
+}
+
+
+
+VERSÃO 2
+const email = prompt("Digite seu email: ")
+const senha = prompt("Digite seu email: ")
+
+const email_correto = "joao@email.com"
+const senha_correta = "123456J@"
+
+if(email === email_correto && senha === senha_correta){
+    alert("Login efetuado com sucesso")
+}else{
+    alert("Email ou senha estão incorretos")
+}
+
+
+VERSÃO 3
+const email = prompt("Digite seu email: ")
+const senha = prompt("Digite seu email: ")
+
+const email_correto = "joao@email.com"
+const senha_correta = "123456J@"
+
+if(email.toLowerCase() === email_correto){
+    if(senha === senha_correta){
+        alert("Login efetuado com sucesso")
+    }else{
+        alert("Senha errada")
+    }
+}else{
+    alert("Email errado")
+}
+
+
+APRENDENDO O LENGTH
+const senha_correta = "123456J@"
+
+console.log(senha_correta.length)
+// RESPOSTA É 8 POR QUE A SENHA TEM 8 CARACTERES
+
+
+
+
+
+FAÇA UM PROGRAMA QUE PEDE PARA O USUÁRIO DIGITAR UMA ÚNICA LETRA
+E MOSTRE NA TELA SE AQUELA LETRA É UMA VOGAL OU UMA CONSOANTE.
+
+const letra = prompt("Digite uma letra do alfabeto: ")
+
+if(letra.length === 1){
+    const vogais = "aeiou"
+    const consoantes = "bcdfghjklmnpqrstvxywz"
+
+    if(vogais.includes(letra.toLowerCase())){
+        alert("É uma vogal")
+    }else if(consoantes.includes(letra.toLowerCase())){
+        alert("É uma consoante")
+    }else{
+        alert("DIGITE APENAS LETRAS DO ALFABETO DE A - Z")
+    }
+}else{
+    alert("Digite apenas UMA letra")
+}
+
+
+
+
+WHILE
+let contador = 0
+
+while(contador < 10){
+    console.log("oi")
+    // contador = contador + 1
+    // contador+=1
+    contador++
+}
+
+
+let contador = 0
+
+while(contador < 10){
+    console.log(contador)
+    contador++
+}
+
+
+
+let contador = 100
+
+while(contador <= 200){
+    console.log(contador)
+    contador++
+}
+
+
+
+
+while(true){
+    const numero = Number(prompt("Digite um número: [0 para parar] "))
+    if(numero === 0){
+        alert("Adeus")
+        break
+    }else{
+        alert(`Você digitou o número ${numero}`)
+    }
+}
