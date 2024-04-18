@@ -1,0 +1,108 @@
+let soma = 0
+let qtde_notas = 0
+
+while(true){
+    const nota = Number(prompt("Digite uma nota: "))
+    if(nota > 10 || nota <0){
+        break
+    }else{
+        soma += nota
+        qtde_notas++
+    }
+}
+
+const media = soma / qtde_notas
+
+if(media >= 7){
+    alert(`Aprovado com a média ${media.toFixed(1)}`)
+}else{
+    alert(`Reprovado com a média ${media.toFixed(1)}`)
+}
+
+
+
+for(let i = 55; i<=97; i++){
+    if(i % 2 === 0){
+        console.log(i)
+    }
+}
+
+
+ATIVIDADE 2
+const numero = Number(prompt("Digite um número: "))
+
+for(let i = 1; i<=10; i++){ 
+    console.log(`${numero} x ${i} = ${numero * i}`)
+}
+
+
+ATIVIDADE 3
+const numero = Number(prompt("Digite um número: "))
+
+for(let i = numero; i>=0; i--){
+    console.log(i);
+}
+
+
+
+
+
+
+const nome = prompt("Digite seu nome: ")
+let qtde_de_a = 0
+
+for(let letra_da_vez of nome.toLowerCase()){
+    if(letra_da_vez === "a"){
+        qtde_de_a ++
+    }
+}
+alert(`Seu nome tem ${qtde_de_a} letras A`)
+
+
+
+
+
+
+
+const nome = prompt("Digite seu nome: ")
+let qtde_de_a = 0
+const todos_os_as = "aáàãâä"
+
+
+for(let letra_da_vez of nome.toLowerCase()){
+    if(todos_os_as.includes(letra_da_vez)){
+        qtde_de_a++
+    }
+}
+alert(`Seu nome tem ${qtde_de_a} letras A`)
+
+
+
+
+const palavra = prompt("Digite uma palavra: ")
+const vogais = "aeiouáàâãäéêíóôõú"
+let palavra_sem_vogal = ""
+
+for(let letra_da_vez of palavra.toLowerCase()){
+    if(!vogais.includes(letra_da_vez)){
+        palavra_sem_vogal += letra_da_vez
+    }
+}
+alert(palavra_sem_vogal)
+
+
+
+
+
+
+const palavra = prompt("Digite uma palavra: ")
+const vogais = "aeiouáàâãäéêíóôõú"
+let contador_de_vogais = 0
+
+for(let letra_da_vez of palavra){
+    if(vogais.includes(letra_da_vez)){
+        contador_de_vogais++
+    }
+}
+
+alert(`A palavra "${palavra}" possui ${contador_de_vogais} vogais`)
